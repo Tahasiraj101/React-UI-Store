@@ -1,0 +1,81 @@
+/* Container for the entire product list */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+/* Individual product card styling */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure content stays at top and button stays at bottom */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  height: 400px;  /* Fixed height for consistent card size */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for product cards */
+.product-card:hover {
+  transform: translateY(-10px); /* Lift the card slightly */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Product title styling */
+.product-card h2 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 15px 0;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+/* Image styling */
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+/* Product price styling */
+.product-card p {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin: 10px 0;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+/* Link button styling for "View Details" */
+.product-card .view-details-btn {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  margin: 15px 10px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  width: 100%;  /* Make the button span full width */
+  transition: background-color 0.3s ease;
+}
+
+.product-card .view-details-btn:hover {
+  background-color: #2980b9;
+}
+
+/* No products message styling */
+.product-list p {
+  font-size: 1.5rem;
+  color: #e74c3c;
+  font-weight: bold;
+}
